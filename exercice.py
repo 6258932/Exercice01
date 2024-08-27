@@ -38,6 +38,7 @@ class LinkedList:
         self.head = prev_node
 
 
+
 # Voici un test de la classe LinkedList
 # Tests
 ll = LinkedList()
