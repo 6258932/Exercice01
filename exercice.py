@@ -25,17 +25,24 @@ class LinkedList:
             cur_node = cur_node.next
         print(None)
 
-    # TODO DONE
+    # TODO
     def reverse(self):
-        prev_node = None
-        cur_node = self.head
-        while cur_node:
-            next_node = cur_node.next
-            cur_node.next = prev_node
-            prev_node = cur_node
-            cur_node = next_node
+        node = self.head
+        self.head = node.next.next
+        if self.head is None:
+            self.head = node
+            return
+        last_node = self.head
+        while node.next:
+            last_node = last_node.next
+        last_node.next = node
 
-        self.head = prev_node
+
+
+
+
+
+
 
 
 
